@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Haniva</string>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+    <string name="nama">Nama</string>
+    <string-array name="jaminan">
+        <item>BPKB</item>
+        <item>SHM</item>
+        <item>Non Jaminan</item>
+    </string-array>
+</resources>

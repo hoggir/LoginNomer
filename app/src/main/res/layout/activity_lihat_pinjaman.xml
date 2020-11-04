@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".LihatPinjamanActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/colorPrimary"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/ic_wave2"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="32dp"
+            android:textSize="24sp"
+            android:text="Pengajuan Pinjaman"
+            android:fontFamily="@font/baloo"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/lpidu"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pp"
+            android:layout_marginStart="32dp"
+            android:text="ID User : "
+            android:visibility="invisible"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/lpnama"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lpidu"
+            android:layout_marginStart="32dp"
+            android:text="Nama : "
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="102dp"
+            android:layout_height="102dp"
+            android:src="@drawable/ic_status"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="8dp"
+        android:id="@+id/datalist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>

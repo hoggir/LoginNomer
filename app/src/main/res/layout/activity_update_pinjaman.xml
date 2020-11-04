@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdatePinjamanActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/colorPrimary"
+                        android:src="@drawable/ic_wave2" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/ic_wave2"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="32dp"
+                    android:textSize="24sp"
+                    android:text="Edit Pinjaman"
+                    android:fontFamily="@font/baloo"
+                    android:textColor="#fff"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/tvp"
+                    android:layout_marginStart="32dp"
+                    android:layout_toStartOf="@+id/ivp"
+                    android:fontFamily="@font/opensans"
+                    android:text="Isi form di bawah ini untuk mengubah pinjaman yang telah diajukan."
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@id/ivp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="102dp"
+                    android:layout_height="102dp"
+                    android:src="@drawable/ic_loan"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/etJumlahBaru"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"
+                    android:background="@drawable/round_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_jumlah"
+                    android:drawablePadding="15dp"
+                    android:hint="Jumlah Pinjaman"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/etWaktuBaru"
+                        android:layout_width="218dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/round_border"
+                        android:drawableLeft="@drawable/ic_waktu"
+                        android:drawablePadding="15dp"
+                        android:hint="Jangka Waktu"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:textAlignment="viewEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:layout_alignParentRight="true"
+                        android:text="Bulan"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_jumlah"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Jaminan :"/>
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/opsiupdate"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="78dp"
+                android:layout_marginEnd="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BPKB" />
+
+                <RadioButton
+                    android:id="@+id/kotlin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SHM" />
+
+                <RadioButton
+                    android:id="@+id/cpp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Non Jaminan" />
+            </RadioGroup>
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_gravity="start"
+                android:id="@+id/btUpdatePin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_bg"
+                android:textColor="@color/white"
+                android:text="Simpan"/>
+
+            <EditText
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/etStatusBaru"
+                android:editable="false"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/round_border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_status"
+                android:drawablePadding="15dp"
+                android:text="Menunggu Konfirmasi"/>
+
+
+            <EditText
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/etIduserBaru"
+                android:editable="false"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="10sp"
+                android:background="@drawable/round_border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_status"
+                android:drawablePadding="15dp"
+                android:hint="Status"/>
+
+            <EditText
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/etIJenisBaru"
+                android:editable="false"
+                android:visibility="visible"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="10sp"
+                android:background="@drawable/round_border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_status"
+                android:drawablePadding="15dp"
+                android:hint="Pinjaman"/>
+
+        </LinearLayout>
+
+</ScrollView>
